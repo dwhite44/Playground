@@ -13,7 +13,7 @@ END
 GO
 
 
-/* Add a new column to a table if it doesn't exist'
+/* Add a new column to a table if it doesn't exist' */
 IF NOT EXISTS (SELECT * FROM syscolumns WHERE id=object_id('tablename') AND name='columnname')
 BEGIN
     ALTER TABLE tablename
