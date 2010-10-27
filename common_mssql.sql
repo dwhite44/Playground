@@ -20,3 +20,6 @@ BEGIN
         Add columnname int NOT NULL DEFAULT 0
 END
 GO
+
+/* Reset Identity Column - this example will set so that the next row added will have value of 100 */
+DBCC CHECKIDENT (tablename, RESEED, 999)
