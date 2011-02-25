@@ -23,3 +23,6 @@ GO
 
 /* Reset Identity Column - this example will set so that the next row added will have value of 100 */
 DBCC CHECKIDENT (tablename, RESEED, 999)
+
+/* Hash password to sha1 */
+SET @PASSWORD = (SELECT UPPER(SUBSTRING(master.dbo.fn_varbintohexstr(HashBytes('SHA1', @password)), 3, 41)))
