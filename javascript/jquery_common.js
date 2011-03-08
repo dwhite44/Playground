@@ -50,6 +50,10 @@
                     url = url.substr(0, paramIndex) + url.substr(valEndIndex);
             }
 
+            url = url.replace("?&", "?");
+            if (url[url.length - 1] == '?')
+              url = url.substr(0, url.length - 1);
+
             return url;
         }
     });
