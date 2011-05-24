@@ -4,7 +4,7 @@ BEGIN
     print 'Create tablename table'
     CREATE TABLE tablename
     (
-        id int identity NOT NULL,
+        id int identity PRIMARY KEY NOT NULL,
         name nvarchar(50) NOT NULL,
         createdBy int NOT NULL,
         createddate datetime NOT NULL
